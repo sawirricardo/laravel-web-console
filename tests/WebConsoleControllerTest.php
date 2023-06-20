@@ -19,10 +19,10 @@ it('can interact with web console', function () {
         'command' => 'pwd',
         'working_directory' => base_path(),
     ])
-    ->assertOk()
-    ->assertJson(function (AssertableJson $json) {
-        return $json->whereContains('working_directory', getcwd())
-            ->whereContains('output', getcwd().PHP_EOL)
-            ->etc();
-    });
+        ->assertOk()
+        ->assertJson(function (AssertableJson $json) {
+            return $json->whereContains('working_directory', getcwd())
+                ->whereContains('output', getcwd().PHP_EOL)
+                ->etc();
+        });
 });
