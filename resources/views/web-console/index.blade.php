@@ -37,13 +37,13 @@
                 axios.post(`{{ $interactUrl ?? '' }}`, {
                     command: line,
                     working_directory: workingDirectory,
-                }).then((result) => {
+                }).then((res) => {
                     term.writeln(``);
-                    if (result.output) {
+                    if (res.data.output) {
                         commands = [...commands, line];
-                        term.writeln(result.output);
+                        term.writeln(res.data.output);
                     }
-                    workingDirectory = result.working_directory
+                    workingDirectory = res.data.working_directory
                     term.write(`${workingDirectory} => $ `)
                 })
             }

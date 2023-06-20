@@ -27,13 +27,13 @@ class WebConsoleController
         if ($cmd->substr(0, 2) == 'cd') {
             if (chdir($cmd->substr(3))) {
                 return response()->json([
-                    'output' => PHP_EOL,
+                    'output' => "\r\n",
                     'working_directory' => getcwd(),
                 ]);
             }
 
             return response()->json([
-                'output' => 'cd: Unable to change directory'.PHP_EOL,
+                'output' => 'cd: Unable to change directory'."\r\n",
                 'working_directory' => getcwd(),
             ]);
         }
@@ -42,14 +42,14 @@ class WebConsoleController
 
         if ($output === false) {
             return response()->json([
-                'output' => PHP_EOL,
+                'output' => "\r\n",
                 'working_directory' => getcwd(),
             ]);
         }
 
         return response()->json([
             'output' => str($output)
-                ->replace("\n", PHP_EOL)
+                ->replace("\n", "\r\n")
                 ->toString(),
             'working_directory' => getcwd(),
         ]);
