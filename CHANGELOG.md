@@ -1,3 +1,7 @@
 # Changelog
 
 All notable changes to `laravel-web-console` will be documented in this file.
+
+## 0.0.1 - 2023-06-20
+
+Initial Commit
