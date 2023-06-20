@@ -61,8 +61,8 @@
         term.write(key)
     });"></div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/xterm@5.2.1/lib/xterm.min.js'></script>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src='https://cdn.jsdelivr.net/npm/xterm@5.2.1/lib/xterm.min.js' defer></script>
 </body>
 
 </html>
