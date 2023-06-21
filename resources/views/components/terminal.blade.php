@@ -7,7 +7,7 @@
     baseDir: null,
     workingDirectory: @js($workingDirectory),
     get tildeWorkingDir() {
-        return this.workingDirectory.replace(baseDir, '~')
+        return this.workingDirectory.replace(this.baseDir, '~')
     }
 }" x-init="baseDir = workingDirectory
 
