@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-web-console` will be documented in this file.
 
+## 0.0.6 - 2023-06-21
+
+bugfix
+
 ## 0.0.5 - 2023-06-21
 
 Change API, only accepts url for now to align with Laravel's Route's default methods.
