@@ -9,7 +9,7 @@ class WebConsoleController
     public function index()
     {
         return view('web-console::web-console.index', [
-            'interactUrl' => route(str_replace('index', 'interact', Route::currentRouteName())),
+            'url' => route(str_replace('index', 'interact', Route::currentRouteName())),
         ]);
     }
 
