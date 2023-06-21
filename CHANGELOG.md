@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-web-console` will be documented in this file.
 
+## 0.0.7 - 2023-06-21
+
+Refactor code
+
 ## 0.0.6 - 2023-06-21
 
 bugfix
