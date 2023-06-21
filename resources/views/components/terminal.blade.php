@@ -7,12 +7,10 @@
     isSelectingCommand: false,
     baseDir: null,
     workingDirectory: @js($workingDirectory),
-    get tildeWorkingDir() {
-        return this.workingDirectory.replace(this.baseDir, '~')
-    },
     setCurrentLine(line = '') {
         this.line = line;
         this.term.write(`\x1b[2K\r`)
+        const tildeWorkingDir = this.workingDirectory.replace(this.baseDir, '~');
         this.term.write(`${tildeWorkingDir} => $ ${line}`)
     },
     handleBackspace() {
