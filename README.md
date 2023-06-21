@@ -48,7 +48,9 @@ php artisan vendor:publish --tag="laravel-web-console-views"
 In your `routes/web.php`
 
 ```php
-Route::webconsole(middleware: ['auth']);
+Route::webconsole('web-console')
+    ->middleware(['auth'])
+    ->name('web-console');
 ```
 
 ## Testing

@@ -19,9 +19,8 @@ class LaravelWebConsoleServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
-        Route::macro('webconsole', function ($url = 'web-console', $middleware = [], $name = 'default') {
-            return Route::name("web-console-{$name}.")
-                ->middleware($middleware)
+        Route::macro('webconsole', function ($url = 'web-console') {
+            return Route::name(str($url)->slug()->append('.'))
                 ->group(function () use ($url) {
                     Route::get($url, [WebConsoleController::class, 'index'])
                         ->name('index');
