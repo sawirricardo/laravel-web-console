@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-web-console` will be documented in this file.
 
+## 0.0.5 - 2023-06-21
+
+Change API, only accepts url for now to align with Laravel's Route's default methods.
+
 ## 0.0.4 - 2023-06-21
 
 Implement copy/paste
